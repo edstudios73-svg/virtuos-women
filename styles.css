@@ -233,3 +233,11 @@ details p{color:var(--grey);margin-top:10px;max-width:60ch}
   .index em{display:none}
   .foot-grid{grid-template-columns:1fr}
 }
+
+/* leadership */
+.leaders{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,40px)}
+.leaders .photo{aspect-ratio:4/5}
+.leaders figcaption{padding-top:16px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.leaders h3{font-size:clamp(1.5rem,2.6vw,2.2rem)}
+.leaders figcaption p{color:var(--grey);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+@media (max-width:520px){.leaders{grid-template-columns:1fr}}
