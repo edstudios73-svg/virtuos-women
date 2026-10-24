@@ -59,17 +59,16 @@ body.menu-open .menu aside{opacity:1}
 
 /* hero */
 .hero{position:relative;height:100svh;min-height:600px;color:var(--white);overflow:hidden;background:var(--black);isolation:isolate}
-.slides{position:absolute;inset:0;z-index:-2}
-.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;opacity:0;transform:scale(1.06);
-  transition:opacity 1.6s ease,transform 7.5s linear}
-.slides img.active{opacity:1;transform:scale(1)}
-/* wide screens: the portrait photos sit side by side so none of them is stretched past its real size */
+.slides{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:1fr;background:var(--black)}
+.col{position:relative;overflow:hidden}
+.col+.col{display:none}
+.col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;opacity:0;transform:scale(1.1);
+  transition:opacity .7s ease,transform 3.2s cubic-bezier(.2,.7,.1,1)}
+.col img.active{opacity:1;transform:scale(1)}
+/* wide screens: three panels side by side, so each photo shows close to its real size */
 @media (min-width:901px){
-  .slides{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--black)}
-  .slides img{position:relative;opacity:0;transform:none;transition:opacity 1.4s ease}
-  .slides img:nth-child(2){transition-delay:.15s}
-  .slides img:nth-child(3){transition-delay:.3s}
-  .hero.loaded .slides img{opacity:1}
+  .slides{grid-template-columns:repeat(3,1fr);gap:2px}
+  .col+.col{display:block}
   .hero-top .counter{visibility:hidden}
 }
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;
@@ -90,7 +89,7 @@ body.menu-open .menu aside{opacity:1}
 .counter{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.18em}
 .progress{width:80px;height:1px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
 .progress b{position:absolute;inset:0;background:var(--white);transform-origin:left;transform:scaleX(0)}
-.progress b.run{animation:prog 6s linear forwards}
+.progress b.run{animation:prog 2.5s linear forwards}
 @keyframes prog{to{transform:scaleX(1)}}
 .scroll{position:absolute;left:50%;bottom:40px;width:1px;height:46px;background:rgba(255,255,255,.25);overflow:hidden}
 .scroll::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--white);animation:drip 2s infinite}

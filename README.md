@@ -6,7 +6,7 @@ It's a plain static site with no build step: five pages, `styles.css` and `scrip
 
 ## Hero photos
 
-The home hero rotates through `assets/hero-1.jpg`, `assets/hero-2.jpg` and `assets/hero-3.jpg`, and `hero-3.jpg` is also used on the About page. Until those files are added, the site shows stand-in images. Use portrait photos about 1600px tall; they're shown in black and white.
+The home hero rotates through `assets/hero-1.webp` to `assets/hero-4.webp` (photos of Rev. Dr. Gifty Ezekiel, resized to 600px wide). `hero-3.webp` is also used on the About page.
 
 ## Deploy
 

@@ -1,14 +1,3 @@
-// until the real photos are in assets/, fall back to a stand-in (and drop captions that name a person)
-document.querySelectorAll('img[data-fallback]').forEach(img => {
-  const swap = () => {
-    img.src = img.dataset.fallback;
-    img.removeAttribute('data-fallback');
-    img.alt = '';
-    img.closest('figure')?.querySelector('figcaption')?.remove();
-  };
-  if (img.complete && !img.naturalWidth) swap(); else img.addEventListener('error', swap, { once: true });
-});
-
 // menu
 const btn = document.querySelector('.menu-btn');
 const label = btn.querySelector('.txt');
@@ -31,21 +20,33 @@ const onScroll = () => {
 onScroll();
 addEventListener('scroll', onScroll, { passive: true });
 
-// hero slideshow
+// hero slideshow: one panel on phones, three on wide screens, always showing different photos
 if (hero) {
-  const imgs = [...hero.querySelectorAll('.slides img')];
+  const cols = [...hero.querySelectorAll('.col')];
+  const total = cols[0].children.length;
   const num = hero.querySelector('.num');
-  const bar = hero.querySelector('.progress b');
-  let i = 0;
-  const show = n => {
-    imgs.forEach((img, k) => img.classList.toggle('active', k === n));
-    num.textContent = String(n + 1).padStart(2, '0');
-    bar.classList.remove('run'); void bar.offsetWidth; bar.classList.add('run');
-  };
-  show(0);
-  hero.classList.add('loaded');
+  const prog = hero.querySelector('.progress b');
   const wide = matchMedia('(min-width: 901px)');
-  if (imgs.length > 1) setInterval(() => { if (wide.matches) return; i = (i + 1) % imgs.length; show(i); }, 6000);
+  const shown = cols.map((_, c) => c % total);
+  const paint = c => [...cols[c].children].forEach((img, k) => img.classList.toggle('active', k === shown[c]));
+  const restartBar = () => { prog.classList.remove('run'); void prog.offsetWidth; prog.classList.add('run'); };
+  cols.forEach((_, c) => paint(c));
+  restartBar();
+  let turn = 0;
+  setInterval(() => {
+    if (wide.matches) {
+      // swap one panel at a time to the photo that isn't on screen
+      const c = turn++ % cols.length;
+      const free = [...Array(total).keys()].filter(k => !shown.includes(k));
+      shown[c] = free.length ? free[0] : (shown[c] + 1) % total;
+      paint(c);
+    } else {
+      shown[0] = (shown[0] + 1) % total;
+      paint(0);
+      num.textContent = String(shown[0] + 1).padStart(2, '0');
+      restartBar();
+    }
+  }, 2500);
 }
 
 // reveal
