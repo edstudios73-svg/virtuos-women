@@ -43,7 +43,9 @@ if (hero) {
     bar.classList.remove('run'); void bar.offsetWidth; bar.classList.add('run');
   };
   show(0);
-  if (imgs.length > 1) setInterval(() => { i = (i + 1) % imgs.length; show(i); }, 6000);
+  hero.classList.add('loaded');
+  const wide = matchMedia('(min-width: 901px)');
+  if (imgs.length > 1) setInterval(() => { if (wide.matches) return; i = (i + 1) % imgs.length; show(i); }, 6000);
 }
 
 // reveal
