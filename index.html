@@ -2,18 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Virtuous Women of Destiny | East Legon, Accra</title>
 <meta name="description" content="A non-profit women's ministry with a missionary outreach vision. Every Tuesday, 9 AM to 12 Noon, at Christian Service Church, East Legon.">
+<link rel="canonical" href="https://virtuous-women-of-destiny.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Virtuous Women of Destiny">
+<meta property="og:locale" content="en_GH">
+<meta property="og:url" content="https://virtuous-women-of-destiny.vercel.app/">
 <meta property="og:title" content="Virtuous Women of Destiny | East Legon, Accra">
 <meta property="og:description" content="A non-profit women's ministry with a missionary outreach vision. Every Tuesday, 9 AM to 12 Noon, at Christian Service Church, East Legon.">
-<meta property="og:image" content="assets/hero-1.webp">
+<meta property="og:image" content="https://virtuous-women-of-destiny.vercel.app/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Women of Destiny. Photos of Prophetess Dr. Gifty Ezekiel and Lady Pastor Kate Quashigah.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Virtuous Women of Destiny | East Legon, Accra">
+<meta name="twitter:description" content="A non-profit women's ministry with a missionary outreach vision. Every Tuesday, 9 AM to 12 Noon, at Christian Service Church, East Legon.">
+<meta name="twitter:image" content="https://virtuous-women-of-destiny.vercel.app/assets/og-image.jpg">
 <meta name="theme-color" content="#0d0d0d">
-<link rel="icon" href="assets/logo.webp">
+<meta name="apple-mobile-web-app-title" content="Women of Destiny">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://tile.openstreetmap.org">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Virtuous Women of Destiny",
+  "alternateName": "Women of Destiny",
+  "slogan": "Women of Destiny. We are highly honoured.",
+  "description": "A non-profit women's ministry with a missionary outreach vision in East Legon, Accra.",
+  "url": "https://virtuous-women-of-destiny.vercel.app/",
+  "logo": "https://virtuous-women-of-destiny.vercel.app/assets/icon-512.png",
+  "image": "https://virtuous-women-of-destiny.vercel.app/assets/og-image.jpg",
+  "telephone": "+233546878015",
+  "founder": {"@type": "Person", "name": "Prophetess Dr. Gifty Ezekiel"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Christian Service Church, Jungle Avenue Road",
+    "addressLocality": "East Legon, Accra",
+    "addressCountry": "GH"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 5.6359, "longitude": -0.1498}
+}
+</script>
 </head>
 <body>
 <header class="bar">
@@ -83,6 +125,26 @@
   </div>
 </section>
 
+<section class="sec find" style="padding-top:0">
+  <div class="row">
+    <p class="label">Find us</p>
+    <div class="map-wrap rv">
+      <div id="map" class="map" role="img" aria-label="Map of East Legon, Accra, with a marker on Jungle Avenue, near Christian Service Church"></div>
+      <div class="map-grain" aria-hidden="true"></div>
+      <div class="map-hud map-hud-top" aria-hidden="true"><span>05.6359&deg; N</span><span>00.1498&deg; W</span></div>
+      <div class="map-card">
+        <p class="label">Every Tuesday &middot; 9 AM &ndash; 12 Noon</p>
+        <h3>Christian Service Church</h3>
+        <p>Jungle Avenue Road, East Legon, Accra</p>
+        <div class="actions">
+          <a class="btn btn-light" href="https://www.google.com/maps/dir/?api=1&amp;destination=Christian+Service+Church+Jungle+Avenue+East+Legon+Accra" target="_blank" rel="noopener">Get directions &rarr;</a>
+          <a class="btn btn-ghost-light" href="https://wa.me/233546878015?text=Hello%2C%20I%27m%20coming%20on%20Tuesday.%20Could%20you%20share%20directions%3F" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" style="padding-top:0">
   <ul class="index">
     <li><a href="about.html"><small>01</small><span>Our story &amp; values</span><em>About</em></a></li>
@@ -102,6 +164,8 @@
   </div>
   <div class="legal"><span>© <span class="yr">2026</span> Virtuous Women of Destiny. A non-profit women's ministry.</span><span>Numbers 6:24–25</span></div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="map.js" defer></script>
 <script src="script.js"></script>
 </body>
 </html>
