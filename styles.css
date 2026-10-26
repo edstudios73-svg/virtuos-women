@@ -282,3 +282,16 @@ details p{color:var(--grey);margin-top:10px;max-width:60ch}
   .map-card{position:relative;left:auto;bottom:auto;max-width:none;background:var(--black);backdrop-filter:none;border:0;border-top:1px solid #2a2a2a}
   .pin-label{display:none}
 }
+
+/* homepage previews of each page */
+.more{display:inline-flex;align-items:center;gap:12px;margin-top:30px;font-size:13px;letter-spacing:.06em;padding-bottom:6px;border-bottom:1px solid currentColor;transition:gap .3s}
+.more:hover{gap:20px}
+.reach{list-style:none;display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:34px;font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.2;color:#d0d0d0}
+.reach li::after{content:" ·";color:#555}
+.reach li:last-child::after{content:""}
+.dark .more{color:var(--white)}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:34px}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1);transition:filter .6s}
+.strip:hover img{filter:none}
+.leaders.solo{grid-template-columns:minmax(0,420px)}
+@media (max-width:600px){.strip{grid-template-columns:1fr 1fr}}
