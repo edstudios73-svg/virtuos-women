@@ -166,6 +166,32 @@ page("index.html", "Virtuous Women of Destiny | East Legon, Accra",
     </div>
   </div>
 </section>
+<section class="sec" style="padding-top:0">
+  <div class="split founder">
+    <figure class="photo rv" style="aspect-ratio:4/5"><img src="assets/hero-2.webp" alt="Prophetess Dr. Gifty Ezekiel" loading="lazy"><figcaption>Founder &amp; President</figcaption></figure>
+    <div>
+      <p class="label" style="color:var(--grey)">Our founder</p>
+      <p class="lede rv" style="margin-top:22px">&ldquo;Every woman has a God-given purpose, <em>and she shouldn&rsquo;t have to find it alone.&rdquo;</em></p>
+      <div class="body rv"><p><strong>Prophetess Dr. Gifty Ezekiel</strong> answered a calling to gather women in faith, purpose and service. Today she leads Virtuous Women of Destiny as its Founder and President.</p></div>
+      <a class="more rv" href="about.html">Meet our founder <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="row">
+    <p class="label">Tuesday mornings</p>
+    <div>
+      <p class="lede rv">Three hours that <em>carry us through the week.</em></p>
+      <ol class="steps">
+        <li class="rv"><figure><img src="assets/photos/eyes-closed-in-worship.webp" alt="A woman worshipping with her eyes closed" loading="lazy"></figure><small>01</small><h3>We pray</h3><p>We open the morning in worship and prayer, for each other and for the city.</p></li>
+        <li class="rv"><figure><img src="assets/photos/listening.webp" alt="A woman listening during the service" loading="lazy"></figure><small>02</small><h3>We study the Word</h3><p>We open the Bible together and ask what it means for the week ahead.</p></li>
+        <li class="rv"><figure><img src="assets/photos/celebration.webp" alt="Celebrating together at a service" loading="lazy"></figure><small>03</small><h3>We go and serve</h3><p>We plan who we&rsquo;ll visit and how we&rsquo;ll help, then go out together.</p></li>
+      </ol>
+      <a class="more rv" href="contact.html">Join us on Tuesday <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
 
 <section class="sec dark">
   <div class="row">
@@ -181,6 +207,24 @@ page("index.html", "Virtuous Women of Destiny | East Legon, Accra",
     </div>
   </div>
 </section>
+<section class="sec">
+  <div class="row">
+    <p class="label">Kingdom investment</p>
+    <div>
+      <p class="lede rv">Your business is part of your calling, <em>too.</em></p>
+      <div class="body rv"><p>Our experts give free direction to women who want to invest, expand, secure, protect, recover or build. Bring the idea, the shop or the side hustle, and leave with a clear next step.</p></div>
+      <a class="more rv" href="https://wa.me/233546878015?text=Hello%2C%20I%27d%20like%20free%20direction%20to%20grow%20my%20business." target="_blank" rel="noopener">Ask for free direction <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="motto">
+  <img src="assets/photos/clapping-in-praise.webp" alt="Women clapping in praise" loading="lazy">
+  <div class="motto-inner">
+    <p class="label">Our motto</p>
+    <p class="rv">Women of Destiny.<br><em>We are highly honoured.</em></p>
+  </div>
+</section>
 
 <section class="sec">
   <div class="row">
@@ -189,11 +233,27 @@ page("index.html", "Virtuous Women of Destiny | East Legon, Accra",
       <p class="lede rv">Moments <em>&amp; memories.</em></p>
       <a class="strip rv" href="gallery.html" aria-label="Open the gallery">
         <img src="assets/photos/praying-in-white.webp" alt="Praying in white lace" loading="lazy">
-        <img src="assets/photos/clapping-in-praise.webp" alt="Clapping in praise" loading="lazy">
+        <img src="assets/photos/singing.webp" alt="Singing in worship" loading="lazy">
         <img src="assets/photos/little-one.webp" alt="A little one at the service" loading="lazy">
         <img src="assets/photos/hands-raised.webp" alt="Hands raised in prayer" loading="lazy">
       </a>
       <a class="more rv" href="gallery.html">View the gallery <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding-top:0">
+  <div class="row">
+    <p class="label">What we stand for</p>
+    <div>
+      <ul class="values rv">
+        <li><small>01</small><h3>Faith</h3><p>We stand on God&rsquo;s Word.</p></li>
+        <li><small>02</small><h3>Purpose</h3><p>Every woman has a calling.</p></li>
+        <li><small>03</small><h3>Integrity</h3><p>Truth in private and in public.</p></li>
+        <li><small>04</small><h3>Compassion</h3><p>Christ&rsquo;s love, shown in care.</p></li>
+        <li><small>05</small><h3>Leadership</h3><p>Wisdom and courage.</p></li>
+        <li><small>06</small><h3>Service</h3><p>Our time, given to others.</p></li>
+      </ul>
+      <a class="more rv" href="about.html">Our mission &amp; vision <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
